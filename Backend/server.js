@@ -11,8 +11,8 @@ const app = express();
 const port = 3010; // You can change the port if needed
 
 app.use(cors({
-  // origin: "https://ecom-app-psi.vercel.app/"
-  origin: "http://localhost:5175"
+  origin: "https://eb-2.vercel.app/"
+  // origin: "http://localhost:5175"
 })); // Allow all origins (or restrict it to specific ones)
 // Middleware to parse JSON bodies
 app.use(express.json());
