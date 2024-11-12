@@ -5,5 +5,5 @@
   "build": {
     "command": "npm run build"
   },
-  "output": "out"
+  "output": "dist"
 }
