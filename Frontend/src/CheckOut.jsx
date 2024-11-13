@@ -12,7 +12,9 @@ export default function CheckOut() {
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(false);
     const {total,show,setshow}=useContext(amountcontext);
+
     
+
     useEffect(() => {
         // This is where you send the cart total to your backend
         fetch('https://eb-2.vercel.app/create-payment-intent', {
@@ -26,6 +28,7 @@ export default function CheckOut() {
           .then((data) =>{
             if (data.clientSecret) {
                 setClientSecret(data.clientSecret);
+                console.log("Success")
               } else {
                 setErrorMessage('Client secret not received');
               }
